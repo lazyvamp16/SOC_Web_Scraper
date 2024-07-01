@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+from getstocks import stock_names as nifty50
+
+print (nifty50)
 
 def extract_key_stats(url):
     headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'}
@@ -24,15 +27,15 @@ def extract_key_stats(url):
 
     return key_stats
 
-nifty50 = [
-    "BHARTIARTL", "TECHM", "INFY", "LT", "HCLTECH", "APOLLOHOSP", "ONGC",
-    "TCS", "WIPRO", "KOTAKBANK", "BAJAJFINSV", "HDFCBANK", "ADANIPORTS", "JSWSTEEL",
-    "ITC", "CIPLA", "M&M", "TITAN", "HDFCLIFE", "SUNPHARMA", "BAJFINANCE", "BRITANNIA",
-    "SBILIFE", "RELIANCE", "DIVISLAB", "HINDUNILVR", "ASIANPAINT", "HINDALCO", "TATASTEEL",
-    "COALINDIA", "ICICIBANK", "AXISBANK", "NESTLEIND", "DRREDDY", "NTPC", "BAJAJ-AUTO",
-    "EICHERMOT", "INDUSINDBK", "GRASIM", "SHRIRAMFIN", "SBIN", "POWERGRID", "TATAMOTORS",
-    "MARUTI", "TATACONSUM", "ULTRACEMCO", "ADANIENT", "HEROMOTOCO"
-]
+# nifty50 = [
+#     "BHARTIARTL", "TECHM", "INFY", "LT", "HCLTECH", "APOLLOHOSP", "ONGC",
+#     "TCS", "WIPRO", "KOTAKBANK", "BAJAJFINSV", "HDFCBANK", "ADANIPORTS", "JSWSTEEL",
+#     "ITC", "CIPLA", "M&M", "TITAN", "HDFCLIFE", "SUNPHARMA", "BAJFINANCE", "BRITANNIA",
+#     "SBILIFE", "RELIANCE", "DIVISLAB", "HINDUNILVR", "ASIANPAINT", "HINDALCO", "TATASTEEL",
+#     "COALINDIA", "ICICIBANK", "AXISBANK", "NESTLEIND", "DRREDDY", "NTPC", "BAJAJ-AUTO",
+#     "EICHERMOT", "INDUSINDBK", "GRASIM", "SHRIRAMFIN", "SBIN", "POWERGRID", "TATAMOTORS",
+#     "MARUTI", "TATACONSUM", "ULTRACEMCO", "ADANIENT", "HEROMOTOCO"
+# ]
 
 base_url = "https://www.google.com/finance/quote/"
 
